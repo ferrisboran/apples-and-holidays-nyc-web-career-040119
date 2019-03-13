@@ -44,8 +44,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   bbq = []
   holiday_hash.each do |season, holiday|
-    #bbq << holiday.select { |name, supply| supply.include?("BBQ")}.keys
-    [holiday.select { |name, supply| supply.include?("BBQ")}.keys].flatten
+    bbq << holiday.select { |name, supply| supply.include?("BBQ")}.keys
   end
-  #bbq.flatten
+  bbq.flatten
 end
